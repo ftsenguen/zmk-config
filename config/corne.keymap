@@ -9,6 +9,24 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+        combos {
+                compatible = "zmk,combos";
+                combo_esc {
+                        timeout-ms = <50>;
+                        key-positions = <18 19>;
+                        bindings = <&kp ESC>;
+                };
+                combo_tab {
+                        timeout-ms = <50>;
+                        key-positions = <13 14>;
+                        bindings = <&kp TAB>;
+                };
+                combo_bspc {
+                        timeout-ms = <50>;
+                        key-positions = <15 16>;
+                        bindings = <&kp bspc>;
+                };
+        };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -25,7 +43,7 @@
                   &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
                         >;
                 };
-                lower_layer {
+                number_nav_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -39,7 +57,7 @@
                         >;
                 };
 
-                raise_layer {
+                symbol_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
