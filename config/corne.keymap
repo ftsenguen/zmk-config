@@ -47,7 +47,16 @@
                         tapping-term-ms = <400>;
                         bindings = <&kp SINGLE_QUOTE>, <&kp DQT>, <&kp GRAV>;
                 };
-                ht_tp: hold_tap_space {
+                ht_hp: hold_tap_hp {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        flavor = "hold-preferred";
+                        tapping-term-ms = <200>;
+                        quick-tap-ms = <50>;
+                        require-prior-idle-ms = <0>;
+                        bindings = <&kp>, <&kp>;
+                };
+                ht_tp: hold_tap_tp {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         flavor = "tap-preferred";
@@ -56,7 +65,7 @@
                         require-prior-idle-ms = <0>;
                         bindings = <&kp>, <&kp>;
                 };
-                ht_ret: retro_hold_tap {
+                ht_tp_ret: retro_hold_tap {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         flavor = "tap-preferred";
@@ -79,10 +88,10 @@
 // |      |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |      |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &none     &kp Q   &kp W         &kp E    &kp R          &kp T                 &kp Y   &kp U          &kp I     &kp O          &kp P              &none
-   &none     &kp A   &ht_tp LALT S &kp D    &ht_tp LCTRL F &kp G                 &kp H   &ht_tp RCTRL J &kp K     &ht_tp LALT L  &ht_ret LGUI SEMI   &none
-   &mo 4     &kp Z   &kp X         &kp C    &kp V          &kp B                 &kp N   &kp M          &kp COMMA &kp DOT        &kp FSLH           &none
-                                   &kp BSPC &mo 1          &ht_tp LSHIFT SPC     &kp RET &mo 2          &kp DEL
+   &none     &kp Q   &kp W         &kp E    &kp R          &kp T                 &kp Y   &kp U          &kp I     &kp O          &kp P                 &none
+   &none     &kp A   &ht_tp LALT S &kp D    &ht_tp LCTRL F &kp G                 &kp H   &ht_tp RCTRL J &kp K     &ht_tp LALT L  &ht_tp_ret LGUI SEMI  &none
+   &mo 4     &kp Z   &kp X         &kp C    &kp V          &kp B                 &kp N   &kp M          &kp COMMA &kp DOT        &kp FSLH              &none
+                                   &kp BSPC &mo 1          &ht_hp LSHIFT SPC     &kp RET &mo 2          &kp DEL
                         >;
                 };
                 number_nav_layer {
