@@ -89,7 +89,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &none     &kp Q   &kp W         &kp E    &kp R          &kp T                 &kp Y   &kp U          &kp I     &kp O          &kp P                 &none
-   &none     &kp A   &ht_tp LALT S &kp D    &ht_tp LCTRL F &kp G                 &kp H   &ht_tp RCTRL J &kp K     &ht_tp LALT L  &ht_tp_ret LGUI SEMI  &none
+   &none     &kp A   &ht_tp LALT S &kp D    &ht_tp LCTRL F &kp G                 &kp H   &ht_tp RCTRL J &kp K     &ht_tp LALT L  &ht_tp LGUI SEMI  &none
    &mo 4     &kp Z   &kp X         &kp C    &kp V          &kp B                 &kp N   &kp M          &kp COMMA &kp DOT        &kp FSLH              &none
                                    &kp BSPC &mo 1          &ht_hp LSHIFT SPC     &kp RET &mo 2          &kp DEL
                         >;
