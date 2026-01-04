@@ -4,20 +4,9 @@ on:
   push:
   pull_request:
   workflow_dispatch:
-
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-
-    steps:
-      - name: Build Corne (Left)
-        uses: zmkfirmware/zmk-build-action@v1
-        with:
-          board: nice_nano_v2
-          shield: corne_left
-
-      - name: Build Corne (Right)
-        uses: zmkfirmware/zmk-build-action@v1
-        with:
-          board: nice_nano_v2
-          shield: corne_right
+    with:
+      board: nice_nano_v2
+      shield: corne_left corne_right
