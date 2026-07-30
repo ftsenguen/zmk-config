@@ -1,0 +1,13 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/* nice!nano v2's board devicetree enables the nRF52840 HV DC/DC regulator
+ * (reg0) by default. On many nice!nano v2 clones this causes drastically
+ * higher standby current draw. See zmkfirmware/zmk#2990.
+ */
+&reg0 {
+    status = "disabled";
+};
