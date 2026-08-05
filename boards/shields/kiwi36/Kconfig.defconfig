@@ -28,6 +28,17 @@ endif
 
 
 
+if SHIELD_KIWI36_LEFT
+
+# Name must be less than 16 characters long!
+config ZMK_KEYBOARD_NAME
+    default "Kiwi36"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
 if SHIELD_KIWI36_LEFT || SHIELD_KIWI36_RIGHT || SHIELD_KIWI36_DONGLE
 
 config ZMK_SPLIT
